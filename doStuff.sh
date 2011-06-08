@@ -18,6 +18,6 @@ incrementFile()
 #	echo 0 > theFile.txt;
 #if
 
-#incrementFile
+incrementFile
 
 #commitFile

@@ -3,7 +3,7 @@
 set -x
 
 incrementFile() {
-	MY_NUMBER=`cat theFile.txt`
+	MY_NUMBER=`cat theFile.txt | head -n 1`
 	((THE_NUM=MY_NUMBER + 2))
 	echo $THE_NUM >> theFile.txt
 }

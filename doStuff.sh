@@ -24,4 +24,4 @@ fi
 
 createFile
 incrementFile
-addAndCommitFile
+#addAndCommitFile

@@ -3,7 +3,7 @@
 incrementFile()
 {
 	MY_NUMBER=`cat theFile.txt`
-	echo $(($MY_NUMBER + 2)) >> theFile.txt
+	echo $(($MY_NUMBER + 2)) > theFile.txt
 }
 
 #commitFile()

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 incrementFile() {
 	MY_NUMBER=`cat theFile.txt`
 	((THE_NUM=MY_NUMBER + 2))
@@ -21,7 +23,5 @@ fi
 }
 
 createFile
-
 incrementFile
-
-#addAndCommitFile
+addAndCommitFile

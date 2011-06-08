@@ -3,16 +3,11 @@
 set -x
 
 incrementFile() {
-	MY_NUMBER=`cat theFile.txt | tail -n 1`
+	MY_NUMBER=`tail -n 1 theFile.txt`
 	((THE_NUM=MY_NUMBER + 2))
 	echo $THE_NUM >> theFile.txt
 }
 
-
-addAndCommitFile() {
-	git add theFile.txt
-	git commit -m "Updating the file."
-}
 
 # Create the file if it doesn't exist
 createFile() {
@@ -24,4 +19,3 @@ fi
 
 createFile
 incrementFile
-#addAndCommitFile

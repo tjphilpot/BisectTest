@@ -16,7 +16,7 @@ incrementFile()
 if [[ ! -f theFile.txt ]]
 then
 	echo 0 > theFile.txt;
-if
+fi
 
 incrementFile
 

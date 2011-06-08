@@ -13,10 +13,10 @@ incrementFile()
 #}
 
 # Create the file if it doesn't exist
-#if [[ ! -f theFile.txt ]]
-#then
-#	echo 0 > theFile.txt;
-#if
+if [[ ! -f theFile.txt ]]
+then
+	echo 0 > theFile.txt;
+if
 
 incrementFile
 

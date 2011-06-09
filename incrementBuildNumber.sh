@@ -8,5 +8,5 @@ fi
 
 # Read in a build number from a file, update it and write it back out.
 BUILD_NUMBER=`cat buildNumber.txt`
-((NEW_NUMBER=BUILDNUMBER + 2))
+((NEW_NUMBER=BUILDNUMBER + 1))
 echo $NEW_NUMBER > buildNumber.txt

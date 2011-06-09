@@ -1,10 +1,12 @@
 #!/bin/bash
 
+BUILD_NUMBER_FILE=${1:-buildNumber.txt}
+
 function createFile() {
-	if [[ ! -f buildNumber.txt ]]
+	if [[ ! -f $BUILD_NUMBER_FILE ]]
 	then
-		echo 1 > buildNumber.txt
-		echo "Created initial buildNumber.txt file."
+		echo 1 > $BUILD_NUMBER_FILE
+		echo "Created initial $BUILD_NUMBER_FILE file."
 		exit;
 	fi
 }
@@ -12,6 +14,6 @@ function createFile() {
 createFile;
 
 # Read in a build number from a file, update it and write it back out.
-BUILD_NUMBER=`cat buildNumber.txt`
+BUILD_NUMBER=`cat $BUILD_NUMBER_FILE`
 ((NEW_NUMBER=BUILDNUMBER + 1))
-echo $NEW_NUMBER > buildNumber.txt
+echo $NEW_NUMBER > $BUILD_NUMBER_FILE

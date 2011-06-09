@@ -1,10 +1,14 @@
 #!/bin/bash
 
-if [[ ! -f buildNumber.txt ]]
-then
-	echo 1 > buildNumber.txt
-	exit;
-fi
+function createFile() {
+	if [[ ! -f buildNumber.txt ]]
+	then
+		echo 1 > buildNumber.txt
+		exit;
+	fi
+}
+
+createFile;
 
 # Read in a build number from a file, update it and write it back out.
 BUILD_NUMBER=`cat buildNumber.txt`

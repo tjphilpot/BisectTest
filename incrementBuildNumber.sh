@@ -4,6 +4,7 @@ function createFile() {
 	if [[ ! -f buildNumber.txt ]]
 	then
 		echo 1 > buildNumber.txt
+		echo "Created initial buildNumber.txt file."
 		exit;
 	fi
 }

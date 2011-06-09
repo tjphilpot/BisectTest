@@ -9,7 +9,6 @@ incrementFile() {
 	echo $THE_NUM >> $MY_FILE
 }
 
-
 # Create the file if it doesn't exist
 createFile() {
 if [[ ! -f $MY_FILE ]]
